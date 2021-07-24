@@ -71,6 +71,8 @@ import Placeholder from "./plugins/Placeholder";
 import SmartText from "./plugins/SmartText";
 import TrailingNode from "./plugins/TrailingNode";
 import MarkdownPaste from "./plugins/MarkdownPaste";
+import BlockQuestions from "./plugins/BlockQuestions";
+import Options from "./nodes/Options";
 
 export { schema, parser, serializer, renderToHtml } from "./server";
 
@@ -303,6 +305,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
           new Doc(),
           new Text(),
           new Question(),
+          new Options(),
           new HardBreak(),
           new Paragraph(),
           new Blockquote(),
@@ -381,6 +384,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
           new MaxLength({
             maxLength: this.props.maxLength,
           }),
+          new BlockQuestions()
         ].filter(extension => {
           // Optionaly disable extensions
           if (this.props.disableExtensions) {

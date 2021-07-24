@@ -35,6 +35,7 @@ import Link from "./marks/Link";
 import Strikethrough from "./marks/Strikethrough";
 import TemplatePlaceholder from "./marks/Placeholder";
 import Underline from "./marks/Underline";
+import Options from "./nodes/Options";
 
 const extensions = new ExtensionManager([
   new Doc(),
@@ -67,6 +68,7 @@ const extensions = new ExtensionManager([
   new TemplatePlaceholder(),
   new Underline(),
   new OrderedList(),
+  new Options(),
 ]);
 
 export const schema = new Schema({
