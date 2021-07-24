@@ -24,6 +24,7 @@ import Table from "./nodes/Table";
 import TableCell from "./nodes/TableCell";
 import TableHeadCell from "./nodes/TableHeadCell";
 import TableRow from "./nodes/TableRow";
+import Question from "./nodes/Question";
 
 // marks
 import Bold from "./marks/Bold";
@@ -38,6 +39,7 @@ import Underline from "./marks/Underline";
 const extensions = new ExtensionManager([
   new Doc(),
   new Text(),
+  new Question(),
   new HardBreak(),
   new Paragraph(),
   new Blockquote(),

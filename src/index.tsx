@@ -49,6 +49,7 @@ import Table from "./nodes/Table";
 import TableCell from "./nodes/TableCell";
 import TableHeadCell from "./nodes/TableHeadCell";
 import TableRow from "./nodes/TableRow";
+import Question from "./nodes/Question";
 
 // marks
 import Bold from "./marks/Bold";
@@ -301,6 +302,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
         ...[
           new Doc(),
           new Text(),
+          new Question(),
           new HardBreak(),
           new Paragraph(),
           new Blockquote(),
@@ -1733,6 +1735,23 @@ const StyledEditor = styled("div")<{
     blockquote {
       font-family: "SF Pro Text", ${props => props.theme.fontFamily};
     }
+  }
+
+  .margin-note{
+    display: inline;
+    float: left;
+    position: relative;
+    width: 60px;
+    margin-left: -80px;
+    font-size: 10px;
+    color: #999;
+    text-align: right;
+  }
+
+  .question-container {
+    border-left: 2px solid #FFD7CD;
+    margin-left: -15px;
+    padding-left: 7px;
   }
 `;
 
