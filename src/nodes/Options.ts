@@ -2,7 +2,7 @@ import { wrappingInputRule } from "prosemirror-inputrules";
 import toggleList from "../commands/toggleList";
 import Node from "./Node";
 
-export default class BulletList extends Node {
+export default class Options extends Node {
   get name() {
     return "options";
   }
@@ -23,6 +23,9 @@ export default class BulletList extends Node {
   keys({ type, schema }) {
     return {
       "Shift-ctrl-o": toggleList(type, schema.nodes.list_item),
+      Tab: (state, dispatch) => {
+        return false
+      },
     };
   }
 

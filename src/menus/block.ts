@@ -16,8 +16,10 @@ import {
   InfoIcon,
   LinkIcon,
 } from "outline-icons";
+
 import { MenuItem } from "../types";
 import baseDictionary from "../dictionary";
+import QuestionIcon from "../icons/QuestionIcon";
 
 const SSR = typeof window === "undefined";
 const isMac = !SSR && window.navigator.platform === "MacIntel";
@@ -27,6 +29,25 @@ export default function blockMenuItems(
   dictionary: typeof baseDictionary
 ): MenuItem[] {
   return [
+    {
+      name: "question",
+      title: "Question",
+      keywords: "qn question qq",
+      icon: QuestionIcon,
+      shortcut: "^ ⇧ q",
+      attrs: { level: 3 },
+    },
+    {
+      name: "options",
+      title: "Options",
+      keywords: "opts options op",
+      icon: BulletedListIcon,
+      shortcut: "^ ⇧ o",
+      attrs: { level: 3 },
+    },
+    {
+      name: "separator",
+    },
     {
       name: "heading",
       title: dictionary.h1,

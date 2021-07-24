@@ -304,10 +304,10 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
         ...[
           new Doc(),
           new Text(),
-          new Question(),
-          new Options(),
           new HardBreak(),
           new Paragraph(),
+          new Question(),
+          new Options(),
           new Blockquote(),
           new CodeBlock({
             dictionary,
@@ -1746,7 +1746,7 @@ const StyledEditor = styled("div")<{
     float: left;
     position: relative;
     width: 60px;
-    margin-left: -80px;
+    margin-left: -88px;
     font-size: 10px;
     color: #999;
     text-align: right;
@@ -1755,7 +1755,7 @@ const StyledEditor = styled("div")<{
   .question-container {
     border-left: 2px solid #FFD7CD;
     margin-left: -15px;
-    padding-left: 7px;
+    padding-left: 15px;
   }
 `;
 

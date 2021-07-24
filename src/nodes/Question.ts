@@ -13,7 +13,7 @@ export default class Question extends Node {
       content: "paragraph+",
       group: "block",
       defining: true,
-      parseDOM: [{ tag: "div" }],
+      parseDOM: [{ tag: "div.question-container" }],
       // toDOM: () => ["div", 0],
       toDOM: node => {
         const marginNote = document.createElement("aside");
