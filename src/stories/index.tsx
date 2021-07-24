@@ -87,7 +87,7 @@ export default function Example(props) {
       : light.background;
 
   return (
-    <div style={{ padding: "1em 2em" }}>
+    <div style={{ padding: "1em 5em" }}>
       <Editor
         onCreateLink={title => {
           // Delay to simulate time taken for remote API request to complete
