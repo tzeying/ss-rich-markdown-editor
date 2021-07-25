@@ -72,7 +72,7 @@ import SmartText from "./plugins/SmartText";
 import TrailingNode from "./plugins/TrailingNode";
 import MarkdownPaste from "./plugins/MarkdownPaste";
 import BlockQuestions from "./plugins/BlockQuestions";
-import Options from "./nodes/Options";
+import OptionList from "./nodes/OptionList";
 
 export { schema, parser, serializer, renderToHtml } from "./server";
 
@@ -307,7 +307,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
           new HardBreak(),
           new Paragraph(),
           new Question(),
-          new Options(),
+          new OptionList(),
           new Blockquote(),
           new CodeBlock({
             dictionary,

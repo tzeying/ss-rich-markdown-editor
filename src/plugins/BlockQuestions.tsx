@@ -15,6 +15,7 @@ export default class Keys extends Extension {
                     handleKeyDown: (view, event) => {
                         const serializer = this.editor.serializer
                         let n = view.state.doc;
+                        console.log(event)
                         let content = n.content['content']
                         for (const node in content) {
                             console.log(content[node].type.name)

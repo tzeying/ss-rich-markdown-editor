@@ -22,10 +22,12 @@ export default class Options extends Node {
 
   keys({ type, schema }) {
     return {
+      // options should only have 1 level - overriding all indentation shortcuts 
+      Tab: (state, dispatch) => { return true; }, // overrides default list ident behaviors
+      "Shift-Tab": (state, dispatch) => { return true; }, // overrides default list ident behaviors
+      "Mod-]": (state, dispatch) => { return true; }, // overrides default list ident behaviors
+      "Mod-[": (state, dispatch) => { return true; }, // overrides default list ident behaviors
       "Shift-ctrl-o": toggleList(type, schema.nodes.list_item),
-      Tab: (state, dispatch) => {
-        return false
-      },
     };
   }
 
